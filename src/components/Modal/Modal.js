@@ -24,15 +24,12 @@ class Modal extends Component {
   };
 
   render() {
-    const { largeImageURL, alt, onClose } = this.props;
+    const { largeImageURL, alt,} = this.props;
 
     return (
       <div className={styles.overlay} onClick={this.handleOverlayClick}>
         <div className={styles.modal}>
           <img src={largeImageURL} alt={alt} />
-          <button type="button" onClick={onClose} className={styles.closeButton}>
-            &times;
-          </button>
         </div>
       </div>
     );
